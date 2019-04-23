@@ -10,7 +10,9 @@ $("button").click(function() {
   fetch(url)
   .then((response) => { return response.json(); })
   .then(function(myJson) {
-    answer.innerHTML = `${myJson.answer}`;
+    yn= `${myJson.answer}`
+    yncapitalized= yn.toUpperCase();
+    answer.innerHTML = `${yncapitalized}`;
     img.src = `${myJson.image}`;
     image.appendChild(img);   
   return myJson
