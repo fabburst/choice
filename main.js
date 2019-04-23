@@ -22,7 +22,7 @@ $("button").click(function() {
 
 $("button").click(function() {
     let imputList = $('#input').val();
-    $("ul").prepend('<li>'+imputList+'</li>');
+    $("ul").prepend(`<li> Q: ${imputList} </li>`);
     let imputList = $('#input').val('');
     imputList.value = '';
     $("#answer_txt").show();
