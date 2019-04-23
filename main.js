@@ -12,21 +12,21 @@ $("button").click(function() {
   .then(function(myJson) {
     yn= `${myJson.answer}`
     yncapitalized= yn.toUpperCase();
-    answer.innerHTML = ` 👉  ${yncapitalized} !!! 👈 `;
+    answer.innerHTML = `
+👉  ${yncapitalized} !!! 👈 `;
     img.src = `${myJson.image}`;
-    image.appendChild(img);   
+    image.appendChild(img);
   return myJson
   })
   .catch( error => { console.log(error); })
  });
 
 $("button").click(function() {
-    let imputList = $('#input').val();
-    $("ul").prepend('<li> Q: '+imputList+'</li>');
-    let imputList = $('#input').val('');
-    imputList.value = '';
+    var imputList = $('#input').val();
+    $("ul").prepend(`<li> Q: ${imputList} </li>`);
+    var imputList = $('#input').val('');
     $("#answer_txt").show();
     $("#image").show();
-     return false;
 
+    return false;
  });
