@@ -12,7 +12,7 @@ $("button").click(function() {
   .then(function(myJson) {
     yn= `${myJson.answer}`
     yncapitalized= yn.toUpperCase();
-    answer.innerHTML = <i class="hand point right icon"></i> ${yncapitalized} !!!`;
+    answer.innerHTML = `<i class="hand point right icon"></i> ${yncapitalized} !!!`;
     img.src = `${myJson.image}`;
     image.appendChild(img);
   return myJson
